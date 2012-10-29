@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @user }
+      format.json { :render => json: @user }
     end
   end
 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       @user = User.new
       respond_to do |format|
         format.html # new.html.erb
-        format.json { render json: @user }
+        format.json { :render => json: @user }
       end
     end
   end
