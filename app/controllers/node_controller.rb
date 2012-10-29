@@ -13,7 +13,7 @@ class NodeController < ApplicationController
   def index
     @project = Project.find(params[:id])
     @project_ideas = Idea.where("project_id = ?", params[:id])
-    @users = User.all()
+    @users = User.find(session[:user_id])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  #{ render :xml => @users }
